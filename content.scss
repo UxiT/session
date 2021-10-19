@@ -1,0 +1,255 @@
+@import "./reset.css";
+@import url("https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap");
+
+$bg: #f5f0f0;
+$font: "Old Standard TT", serif;
+$black: #302d2d;
+$radius: 11px;
+
+@mixin background($pic, $size, $position: center, $repeat: no-repeat) {
+  background-image: url("./img/#{$pic}");
+  background-size: $size;
+  background-position: $position;
+  background-repeat: $repeat;
+}
+
+@function desk($v) {
+  @return (($v/14.4) * 1vw);
+}
+
+// Header
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font;
+  color: $black;
+  background-color: $bg;
+}
+
+.header {
+  position: relative;
+  height: desk(1024);
+
+  &::before {
+    content: "";
+    position: absolute;
+    height: desk(984);
+    width: desk(1405);
+    border: 1px $black solid;
+    left: 50%;
+    top: desk(16);
+    transform: translate(-50%);
+    z-index: -1;
+  }
+
+  &__block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: desk(261);
+
+    .wrapper {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: center;
+
+      .title__dec {
+        width: desk(366);
+        height: desk(44);
+        margin: auto;
+      }
+
+      #img1 {
+        margin-bottom: desk(22);
+      }
+      #img2 {
+        margin-top: desk(44);
+      }
+    }
+  }
+
+  &__title {
+    font-size: desk(144);
+    font-weight: 400;
+    line-height: desk(178);
+  }
+
+  &__subtitle {
+    font-size: desk(35);
+  }
+
+  &__footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: desk(140);
+
+    span {
+      font-size: desk(25);
+    }
+
+    .date {
+      padding: desk(2) desk(5);
+      border: 2px $black solid;
+    }
+
+    .group {
+      margin-top: desk(7);
+    }
+  }
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: desk(71);
+  width: desk(1020);
+  margin: auto;
+
+  &__item {
+    cursor: pointer;
+  }
+
+  &__text {
+    font-size: desk(36);
+    font-weight: 400;
+  }
+
+  &__dot {
+    width: desk(10);
+    height: desk(10);
+    border-radius: 50%;
+    background-color: $black;
+  }
+}
+
+// 2-nd block
+
+.author {
+  &__wrapper {
+    width: desk(1312);
+    margin: auto;
+  }
+
+  &__top {
+    display: flex;
+    margin-top: desk(46);
+    border-bottom: 1px $black solid;
+
+    h2 {
+      font-weight: 400;
+      font-size: desk(79);
+      line-height: desk(73);
+      background: $bg;
+      padding: desk(9) desk(10);
+      width: 58%;
+      transform: translate(-4vw, 8.3vw);
+    }
+  }
+  &__card {
+    background-color: $black;
+    border-radius: $radius;
+
+    margin-left: desk(49);
+    width: desk(526);
+    padding: desk(37) 0 desk(10) desk(20);
+    position: relative;
+
+    span {
+      color: #fff;
+      font-size: desk(44);
+      line-height: desk(60);
+      font-weight: 400;
+      display: block;
+      margin-bottom: desk(18);
+    }
+
+    #span_shifted {
+      margin-left: desk(178);
+      margin-bottom: 0;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      background-color: $bg;
+      width: desk(150);
+      height: desk(106);
+
+      left: 0;
+      bottom: desk(20);
+    }
+  }
+
+  &__styles {
+    margin-top: desk(61);
+    padding-left: desk(60);
+
+    .row {
+      display: flex;
+      flex-direction: row;
+      margin-bottom: desk(21);
+      justify-content: space-between;
+
+      span {
+        color: $black;
+      }
+
+      .regular {
+        font-size: desk(188);
+        display: block;
+        transform: translate(0, 7vw);
+      }
+
+      .italic {
+        font-style: italic;
+        font-size: desk(221);
+      }
+      .bold__container {
+        background: $black;
+        border-radius: $radius;
+        height: desk(270);
+        width: desk(713);
+        margin-left: 31vw;
+        position: relative;
+
+        &::before {
+          content: "";
+          position: absolute;
+          background-color: $bg;
+          width: desk(75);
+          height: desk(39);
+          left: 0;
+          bottom: 0;
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          background-color: $bg;
+          width: 9.72778vw;
+          height: 3.525vw;
+          top: 0;
+          right: 0;
+        }
+      }
+
+      .bold {
+        font-size: desk(323);
+        line-height: 1em;
+        color: $bg;
+        font-weight: bold;
+        display: block;
+        transform: translateY(2vw);
+      }
+    }
+  }
+}
