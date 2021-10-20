@@ -253,3 +253,575 @@ body {
     }
   }
 }
+
+// 3-rd block
+
+.use {
+  &__section {
+    padding-top: desk(72);
+    padding-bottom: desk(30);
+  }
+
+  &__wrapper {
+    width: desk(1105);
+    margin: auto;
+  }
+
+  &__title {
+    font-size: desk(44);
+    text-align: center;
+    font-weight: 400;
+  }
+
+  &__logo {
+    margin-top: desk(50);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    span {
+      font-size: desk(79);
+      font-weight: bold;
+      line-height: 1em;
+    }
+
+    .small {
+      font-size: desk(35);
+      font-weight: 400;
+      font-style: italic;
+      padding-left: 9vw;
+    }
+  }
+
+  &__headlines {
+    display: block;
+    margin: auto;
+    margin-top: desk(20);
+    text-align: center;
+    font-size: desk(79);
+  }
+
+  &__menu {
+    margin-top: desk(100);
+
+    &__top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      span {
+        font-size: desk(44);
+        font-weight: bold;
+      }
+    }
+
+    &__body {
+      display: flex;
+      justify-content: space-between;
+      margin-top: desk(31);
+      span {
+        font-size: desk(44);
+        font-style: italic;
+        writing-mode: vertical-lr;
+        text-orientation: mixed;
+        transform: rotate(180deg);
+        line-height: 0.5em;
+      }
+    }
+  }
+
+  &__bottom {
+    margin-top: desk(58);
+    border-top: 1px $black solid;
+    padding: desk(35) 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    hr {
+      width: desk(253);
+      height: 2px;
+      background-color: $black;
+    }
+
+    span {
+      font-size: desk(35);
+    }
+
+    .dot {
+      width: desk(15);
+      height: desk(15);
+      border-radius: 50%;
+      background-color: $black;
+      margin-left: desk(25);
+    }
+
+    span ~ .dot {
+      margin-left: 0;
+      margin-right: desk(25);
+    }
+  }
+}
+
+// 4rth block
+
+.read {
+  &__section {
+    padding-top: desk(20);
+    position: relative;
+    height: 136vw;
+  }
+
+  &__bg {
+    position: absolute;
+    left: 0;
+    top: 44vw;
+    font-size: desk(66);
+    line-height: desk(84);
+    opacity: 0.1;
+    z-index: -1;
+  }
+
+  &__wrapper {
+    width: desk(1292);
+    margin: auto;
+
+    ul {
+      margin-top: desk(50);
+      padding-left: 2vw;
+
+      li {
+        width: 33vw;
+        list-style: none;
+        position: relative;
+
+        &::before {
+          content: "";
+          position: absolute;
+          width: desk(5);
+          height: desk(5);
+          background-color: $black;
+          border-radius: 50%;
+          top: 0.6vw;
+          left: -1.2vw;
+        }
+
+        span {
+          font-size: desk(25);
+          width: 20vw;
+        }
+      }
+    }
+  }
+
+  &__title {
+    font-size: desk(44);
+    font-weight: 400;
+  }
+
+  &__text {
+    margin-top: desk(30);
+    font-size: desk(44);
+    width: 49%;
+  }
+
+  &__book {
+    position: absolute;
+    width: desk(596);
+    height: desk(865);
+    top: 6.5vw;
+    right: desk(73);
+  }
+
+  &__bottom {
+    margin-top: desk(490);
+    position: relative;
+
+    ul {
+      padding: 1.4vw 1.5vw 1.4vw 2.5vw;
+      background-color: $bg;
+      border: 1px $black solid;
+      border-radius: 10px;
+      width: 48vw;
+      li {
+        width: 100%;
+      }
+    }
+  }
+
+  &__darkacademia {
+    position: absolute;
+    width: desk(328);
+    height: desk(444);
+    left: 50%;
+    top: 15vw;
+    transform: translate(-50%);
+  }
+}
+
+//5-th block dark cafe
+
+.cafe {
+  &__section {
+    padding-top: desk(52);
+    padding-bottom: desk(130);
+  }
+
+  &__wrapper {
+    width: desk(1190);
+    margin: auto;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &__shifted {
+    padding-top: desk(98);
+  }
+
+  &__menu {
+    &__header {
+      width: desk(340);
+      height: desk(100);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-image: url("./img/cafe_bg.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      margin: auto;
+      span {
+        font-size: desk(65);
+      }
+
+      .line {
+        width: 1px;
+        height: desk(62);
+        background-color: $black;
+        margin: 0 desk(10);
+      }
+    }
+
+    &__pic {
+      img {
+        width: desk(372);
+        height: desk(573);
+        margin-top: desk(52);
+      }
+    }
+  }
+
+  &__check {
+    width: desk(336);
+    height: desk(563);
+    flex-shrink: 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__fit {
+    width: desk(514);
+    .cafe__title {
+      font-size: desk(44);
+      line-height: desk(54);
+      padding: desk(12) desk(27);
+      border: 4px $black solid;
+      border-radius: 50px;
+      font-weight: 400;
+      width: 24vw;
+      margin: auto;
+    }
+
+    &__body {
+      margin-top: desk(68);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__text {
+      font-size: 2.9vw;
+      text-align: center;
+    }
+
+    &__star {
+      width: desk(36);
+      height: desk(36);
+      background-image: url("./img/star.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      margin: desk(20) 0;
+    }
+  }
+}
+
+// 6-th block
+
+.lib {
+  &__section {
+    padding-top: desk(30);
+    padding-bottom: desk(120);
+  }
+  &__wrapper {
+    width: desk(1240);
+    margin: auto;
+  }
+
+  &__title {
+    font-size: desk(123);
+    font-weight: 700;
+    line-height: 1em;
+
+    &__wrapper {
+      width: desk(1112);
+      height: desk(202);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-image: url("./img//lib_bg.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      margin: auto;
+
+      span {
+        font-size: desk(30);
+        margin-top: desk(-20);
+      }
+    }
+  }
+
+  &__content {
+    margin-top: desk(100);
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__book {
+    width: desk(188);
+    height: desk(504);
+    background-image: url("./img/book.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    position: relative;
+
+    span {
+      color: $bg;
+    }
+
+    &__text {
+      font-size: desk(38);
+      font-weight: 700;
+      text-orientation: mixed;
+      writing-mode: vertical-lr;
+      transform: rotate(180deg);
+      position: absolute;
+      right: 1vw;
+      bottom: 8vw;
+    }
+
+    &__num {
+      font-size: desk(50);
+      font-weight: 700;
+      position: absolute;
+      left: 50%;
+      bottom: 1vw;
+      transform: translate(-50%);
+    }
+  }
+}
+
+// 7-nth block
+
+.comp {
+  &__section {
+    padding-top: desk(50);
+    padding-bottom: desk(40);
+  }
+
+  &__wrapper {
+    width: desk(1248);
+    margin: auto;
+  }
+
+  &__row {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+
+    &__ticket {
+      width: desk(594);
+      height: desk(244);
+      flex-shrink: 0;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  &__title {
+    color: $bg;
+    font-size: desk(72);
+    font-weight: 400;
+    width: 80%;
+    text-align: center;
+
+    &__wrapper {
+      width: 100%;
+      height: desk(365);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: $black;
+    }
+
+    &__wrapper ~ .comp__row {
+      align-items: flex-start;
+    }
+  }
+
+  &__text {
+    font-size: desk(79);
+    letter-spacing: 1vw;
+    width: 45.4vw;
+    margin-bottom: -1vw;
+    margin-left: 1vw;
+  }
+}
+
+// Letter languages
+
+.letter {
+  &__section {
+    padding-top: desk(35);
+    padding-bottom: desk(65);
+  }
+
+  &__content {
+    width: desk(1257);
+    height: desk(953);
+    margin: auto;
+    background-image: url("./img/letter.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: relative;
+  }
+
+  &__text {
+    font-style: italic;
+    font-size: desk(19);
+    line-height: desk(23.5);
+    max-width: desk(720);
+    text-align: center;
+    position: absolute;
+    left: 38%;
+    top: 14.2vw;
+    transform: translate(-50%);
+  }
+
+  &__title {
+    font-weight: 400;
+    font-size: desk(19);
+    font-style: italic;
+    position: absolute;
+    left: 7.5vw;
+    top: 54.4vw;
+  }
+}
+
+// Chess
+
+.sym {
+  &__section {
+    padding-top: desk(168);
+    padding-bottom: desk(115);
+  }
+
+  &__wrapper {
+    width: desk(1260);
+    margin: auto;
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+  }
+
+  &__chess {
+    width: desk(735);
+    height: desk(735);
+    border: 6px $black solid;
+    padding: desk(22);
+
+    &__content {
+      width: 100%;
+      height: 100%;
+      border: 1px $black solid;
+      background-image: url("./img/chess.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+
+    &__text {
+      font-style: italic;
+      font-size: desk(19);
+      line-height: desk(32);
+      color: $bg;
+      padding: 0.13vw;
+    }
+  }
+
+  &__title {
+    font-size: desk(64);
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    text-align: center;
+    font-weight: 400;
+  }
+
+  &__case {
+    position: relative;
+    margin-left: desk(114);
+    .case {
+      width: desk(371.6);
+      height: desk(574);
+      border: 7px $black solid;
+      border-radius: desk(45);
+    }
+    .shadow {
+      background: $black;
+      position: absolute;
+      z-index: -1;
+      left: desk(-34);
+      bottom: desk(-51);
+    }
+    .light {
+      background-color: $bg;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .border {
+      width: desk(338);
+      height: desk(539);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 4px $black solid;
+      border-radius: 3vw;
+    }
+  }
+}
